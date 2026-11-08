@@ -1,0 +1,72 @@
+[
+  {
+    "file": "maze512-1-0.map",
+    "url": "https://www.movingai.com/benchmarks/maze/maze512-1-0.map.zip",
+    "sha256": "4a053733e15477598968ae98fa1508d8a14d6181bcb3d79ca26c427904acc985"
+  },
+  {
+    "file": "maze512-1-0.scen",
+    "url": "https://www.movingai.com/benchmarks/maze/maze512-1-0.map-scen.zip",
+    "sha256": "e1553353e3fb90031c2b1ac95e1294f785613046c5b50949fca2bc4ea1982ca8"
+  },
+  {
+    "file": "maze512-16-0.map",
+    "url": "https://www.movingai.com/benchmarks/maze/maze512-16-0.map.zip",
+    "sha256": "7fd1b43f296738c093cbd5f589b1414fbb8cc35f7d7462fd188c21fa3f99aac3"
+  },
+  {
+    "file": "maze512-16-0.scen",
+    "url": "https://www.movingai.com/benchmarks/maze/maze512-16-0.map-scen.zip",
+    "sha256": "4a0d78bdcf46ddae03df806a28130ab867261844a5ca892b657aeb9f5b07f0f7"
+  },
+  {
+    "file": "random512-10-0.map",
+    "url": "https://www.movingai.com/benchmarks/random/random512-10-0.map.zip",
+    "sha256": "df47a4030f8967d8be60b33fecd1f6aa059132a2fe1e1b19e463dc52c0838654"
+  },
+  {
+    "file": "random512-10-0.scen",
+    "url": "https://www.movingai.com/benchmarks/random/random512-10-0.map-scen.zip",
+    "sha256": "4321aa42397455bafef06c8d50c0a0e343c48b270ac51cec0c10acb9db45f418"
+  },
+  {
+    "file": "random512-30-0.map",
+    "url": "https://www.movingai.com/benchmarks/random/random512-30-0.map.zip",
+    "sha256": "173962175c042ccac4e8137d1f86dff10bbabd8e0c32227b9070a2e6f39e242b"
+  },
+  {
+    "file": "random512-30-0.scen",
+    "url": "https://www.movingai.com/benchmarks/random/random512-30-0.map-scen.zip",
+    "sha256": "b11b87d3a1c6d4f3358220f84965cd5a82b050ac1c869d25c9663ea2e7744492"
+  },
+  {
+    "file": "16room_000.map",
+    "url": "https://www.movingai.com/benchmarks/room/16room_000.map.zip",
+    "sha256": "efe1156993b2b96df1b23ce4f0f89d4c66b77051d9484efefa93899b141458af"
+  },
+  {
+    "file": "16room_000.scen",
+    "url": "https://www.movingai.com/benchmarks/room/16room_000.map-scen.zip",
+    "sha256": "b1a17994cacca6a5c15bd08f439c1027d942e227d3dd59cf1b05d4456a3c367c"
+  },
+  {
+    "file": "arena2.map",
+    "url": "https://www.movingai.com/benchmarks/dao/arena2.map.zip",
+    "sha256": "9c8255e89179fa1b8098f5744d9392ed78de479a08fda8fb170c05a10f22ce2a"
+  },
+  {
+    "file": "arena2.scen",
+    "url": "https://www.movingai.com/benchmarks/dao/arena2.map-scen.zip",
+    "sha256": "4267bd401aa9c9d855cfe2f10cd934dfe2b674c43db9bbff95fe6cf15e3fb163"
+  },
+  {
+    "file": "brc000d.map",
+    "url": "https://www.movingai.com/benchmarks/dao/brc000d.map.zip",
+    "sha256": "c5bcb3632d83e0dffe0ebcae7e8bccc57c667006f9a2d47103f5e8de528d0245"
+  },
+  {
+    "file": "brc000d.scen",
+    "url": "https://www.movingai.com/benchmarks/dao/brc000d.map-scen.zip",
+    "sha256": "d9bb9a1f16387c37e651a8cd33df944cba0146bb6a3bae70678bdb3db0a14f2e"
+  }
+]

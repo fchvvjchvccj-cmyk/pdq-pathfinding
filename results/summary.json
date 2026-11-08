@@ -1,0 +1,167 @@
+[
+  {
+    "map": "open-128",
+    "median_ms": {
+      "bfs": 4.19735,
+      "astar_heap_high_g": 0.1805,
+      "astar_heap_low_g": 1.1442999999999999,
+      "astar_bucket": 0.13055,
+      "pdq": 0.1184
+    },
+    "pdq_speedup_vs_heap_high_g": 1.5219710315130162
+  },
+  {
+    "map": "random25-128",
+    "median_ms": {
+      "bfs": 2.68345,
+      "astar_heap_high_g": 0.8526499999999999,
+      "astar_heap_low_g": 1.15065,
+      "astar_bucket": 0.72495,
+      "pdq": 0.6469499999999999
+    },
+    "pdq_speedup_vs_heap_high_g": 1.46033339832326
+  },
+  {
+    "map": "barriers-128",
+    "median_ms": {
+      "bfs": 4.0778,
+      "astar_heap_high_g": 10.30425,
+      "astar_heap_low_g": 9.147400000000001,
+      "astar_bucket": 7.1355,
+      "pdq": 6.1538
+    },
+    "pdq_speedup_vs_heap_high_g": 1.7242694478918206
+  },
+  {
+    "map": "disconnected-128",
+    "median_ms": {
+      "bfs": 3.58455,
+      "astar_heap_high_g": 12.788599999999999,
+      "astar_heap_low_g": 9.703,
+      "astar_bucket": 7.8367,
+      "pdq": 7.0525
+    },
+    "pdq_speedup_vs_heap_high_g": 1.7883801640478507
+  },
+  {
+    "map": "open-256",
+    "median_ms": {
+      "bfs": 19.741149999999998,
+      "astar_heap_high_g": 0.84815,
+      "astar_heap_low_g": 7.69635,
+      "astar_bucket": 0.72975,
+      "pdq": 0.72055
+    },
+    "pdq_speedup_vs_heap_high_g": 1.1985360608858595
+  },
+  {
+    "map": "random25-256",
+    "median_ms": {
+      "bfs": 12.324950000000001,
+      "astar_heap_high_g": 3.8031,
+      "astar_heap_low_g": 4.7927,
+      "astar_bucket": 2.806,
+      "pdq": 2.5247
+    },
+    "pdq_speedup_vs_heap_high_g": 1.517769791120523
+  },
+  {
+    "map": "barriers-256",
+    "median_ms": {
+      "bfs": 13.4637,
+      "astar_heap_high_g": 38.641400000000004,
+      "astar_heap_low_g": 32.596199999999996,
+      "astar_bucket": 25.3153,
+      "pdq": 21.8869
+    },
+    "pdq_speedup_vs_heap_high_g": 1.7445407983040857
+  },
+  {
+    "map": "disconnected-256",
+    "median_ms": {
+      "bfs": 14.997250000000001,
+      "astar_heap_high_g": 54.832,
+      "astar_heap_low_g": 41.7943,
+      "astar_bucket": 32.6002,
+      "pdq": 28.22555
+    },
+    "pdq_speedup_vs_heap_high_g": 1.94261163899303
+  },
+  {
+    "map": "16room_000",
+    "median_ms": {
+      "bfs": 71.5016,
+      "astar_heap_high_g": 23.2759,
+      "astar_heap_low_g": 28.77225,
+      "astar_bucket": 15.081399999999999,
+      "pdq": 13.504999999999999
+    },
+    "pdq_speedup_vs_heap_high_g": 1.8088451679916466
+  },
+  {
+    "map": "arena2",
+    "median_ms": {
+      "bfs": 8.681550000000001,
+      "astar_heap_high_g": 4.8792,
+      "astar_heap_low_g": 5.5832,
+      "astar_bucket": 2.54565,
+      "pdq": 2.1942
+    },
+    "pdq_speedup_vs_heap_high_g": 1.889616225941594
+  },
+  {
+    "map": "brc000d",
+    "median_ms": {
+      "bfs": 9.26135,
+      "astar_heap_high_g": 2.3577,
+      "astar_heap_low_g": 6.98465,
+      "astar_bucket": 0.55765,
+      "pdq": 0.47435000000000005
+    },
+    "pdq_speedup_vs_heap_high_g": 1.7140302502940923
+  },
+  {
+    "map": "maze512-1-0",
+    "median_ms": {
+      "bfs": 44.6438,
+      "astar_heap_high_g": 88.23475,
+      "astar_heap_low_g": 86.48535,
+      "astar_bucket": 64.7132,
+      "pdq": 57.150000000000006
+    },
+    "pdq_speedup_vs_heap_high_g": 1.5094862760536094
+  },
+  {
+    "map": "maze512-16-0",
+    "median_ms": {
+      "bfs": 81.0858,
+      "astar_heap_high_g": 230.5279,
+      "astar_heap_low_g": 194.79865,
+      "astar_bucket": 149.74020000000002,
+      "pdq": 130.01794999999998
+    },
+    "pdq_speedup_vs_heap_high_g": 1.7556944323539851
+  },
+  {
+    "map": "random512-10-0",
+    "median_ms": {
+      "bfs": 90.15845,
+      "astar_heap_high_g": 4.9064,
+      "astar_heap_low_g": 32.2392,
+      "astar_bucket": 4.1668,
+      "pdq": 3.9494999999999996
+    },
+    "pdq_speedup_vs_heap_high_g": 1.14097770397259
+  },
+  {
+    "map": "random512-30-0",
+    "median_ms": {
+      "bfs": 70.36215,
+      "astar_heap_high_g": 29.00105,
+      "astar_heap_low_g": 26.921599999999998,
+      "astar_bucket": 19.213549999999998,
+      "pdq": 17.1681
+    },
+    "pdq_speedup_vs_heap_high_g": 1.6369710518530112
+  }
+]
