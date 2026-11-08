@@ -2,20 +2,22 @@
 
 [简体中文](README.md) · English
 
-PDQ (Potential-Difference Queue) uses a deque to find shortest paths on a grid. It works when you can move one square up, down, left, or right, every move costs 1, and the map stays fixed during a search. This repository has a Python implementation and benchmarks against BFS, heap-based A*, and bucket-queue A*.
+PDQ (Potential-Difference Queue) finds shortest paths on a grid using a deque. You can move up, down, left, or right, each move costs 1, and obstacles stay put during the search. The repository includes a Python implementation and benchmarks against BFS, heap-based A*, and bucket-queue A*.
 
 ## Why a deque is enough
 
-Let `h` be the Manhattan distance to the goal. On a four-way grid, each move changes `h` by exactly 1. Give an edge `u → v` the weight `(1 + h(v) - h(u)) / 2` and you only have two weights left: 0 and 1. When you find a shorter route to a neighbor, put it at the front of the deque for a 0 edge or at the back for a 1 edge.
+Think about what happens to A*'s priority when you take a step. The distance traveled, `g`, goes up by 1. If you step closer to the goal, the Manhattan distance `h` goes down by 1, so `g + h` stays the same. If you step away, `g + h` goes up by 2.
 
-Add up those weights along a path and the intermediate `h` values cancel out. You're left with half the step count plus a constant that depends only on the start and goal. For a fixed start and goal, minimizing the new cost still gives the fewest steps. That's why 0–1 BFS works here.
+Divide that change by two and each edge `u → v` gets a weight of `(1 + h(v) - h(u)) / 2`: either 0 or 1. When a better route to a neighbor turns up, put the neighbor at the front of the deque for a 0 edge and at the back for a 1 edge. That's the rule for 0–1 BFS.
 
-In the benchmark, the original PDQ and the bucket-queue A* baseline returned the same paths and expanded the same number of nodes. The landmark version builds on the existing ALT approach.
+This still gives a shortest path. Add up the new weights along a route and the intermediate `h` terms cancel out. The total is half the number of steps plus a constant that depends only on the start and goal. So the route with the lowest new cost also takes the fewest steps.
 
 ## What the benchmarks showed
 
-Across 240 queries on 15 maps, the median paired speedup for `pdq_fast` was **1.43×** over the original PDQ, **2.52×** over heap-based A* that breaks ties in favor of higher `g`, and **1.63×** over bucket-queue A*. The timings include search and full path reconstruction. These numbers describe this set of maps, queries, and Python implementations.
+The original PDQ and bucket-queue A* returned the same paths and expanded the same number of nodes. The timing difference mainly comes down to how they manage the queue and its priorities. BFS still came out ahead on some maps with long detours.
 
-On the two maze maps, the landmark version took about 11 and 12 queries to pay back its setup cost compared with `pdq_fast`. Across all 15 maps at 16 queries each, `pdq_fast` still had the lower total cost once setup was included.
+Across 240 queries on 15 maps, the median speedup for `pdq_fast` was **1.43×** over the original PDQ, **2.52×** over heap-based A* with ties broken in favor of higher `g`, and **1.63×** over bucket-queue A*. Each ratio compares timings for the same query, including the time it took to reconstruct the full path.
 
-See the [original report](results/report.md), the [optimization report](results_optimized/report.md), and the [per-query data](results_optimized/queries.csv). The reports are in Chinese and include cases where BFS was faster. Diagonal moves, weighted terrain, and dynamic obstacles were outside the scope of these tests.
+The landmark version borrows from ALT. On the two maze maps, it took an estimated 11 and 12 queries to make up for the time spent building the landmarks, compared with just using `pdq_fast`. Across all 15 maps, with 16 queries per map, `pdq_fast` still took less time overall.
+
+The [original report](results/report.md) and [follow-up report](results_optimized/report.md) are in Chinese; the [per-query timings](results_optimized/queries.csv) are also available. The results are for the Python implementations in this repo. They don't cover diagonal movement, weighted terrain, or obstacles that change during a search.
